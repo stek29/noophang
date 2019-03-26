@@ -1,0 +1,7 @@
+#!/bin/sh
+
+trap "exit" SIGTERM
+while :; do
+  sleep 10 &
+  wait $!
+done
